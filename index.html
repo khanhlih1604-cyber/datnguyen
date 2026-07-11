@@ -17,6 +17,66 @@
       transform: none;
     }
   }
+
+  /* Style bổ sung cho các nút và khối dẫn link Google Drive */
+  .btn-report {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-report:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  .all-assignments-box {
+    margin-top: 30px;
+    padding: 24px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  .all-assignments-box h4 {
+    margin: 0 0 8px 0;
+    font-family: 'Playfair Display', serif;
+    color: #1e3a8a;
+    font-size: 20px;
+  }
+  .all-assignments-box p {
+    margin: 0 0 16px 0;
+    font-family: 'Inter', sans-serif;
+    color: #1e40af;
+    font-size: 14px;
+  }
+  .btn-all-reports {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-all-reports:hover {
+    background-color: #172554;
+    transform: translateY(-2px);
+  }
 </style>
 </head>
 <body>
@@ -94,6 +154,7 @@
       <h2 class="section-title">Các bài tập thực hành</h2>
     </div>
 
+    <!-- Bài tập 1 -->
     <div class="assignment">
       <div class="assignment-head">
         <h3>Bài tập 1 — <span>Máy tính và các thiết bị ngoại vi</span></h3>
@@ -107,8 +168,10 @@
         <h4>Quá trình thực hiện</h4>
         <p>Tôi quan sát, nhận diện và phân biệt chức năng của các thiết bị phần cứng, đồng thời thực hành những thao tác cơ bản liên quan đến việc sử dụng máy tính. Qua bài tập này, tôi hiểu rõ hơn về cấu tạo của một hệ thống máy tính hoàn chỉnh và có nền tảng ban đầu để sử dụng thiết bị số một cách chủ động hơn.</p>
       </div>
+      <a href="#" target="_blank" class="btn-report">Xem chi tiết báo cáo &rarr;</a>
     </div>
 
+    <!-- Bài tập 2 -->
     <div class="assignment">
       <div class="assignment-head">
         <h3>Bài tập 2 — <span>Khai thác dữ liệu và thông tin</span></h3>
@@ -122,8 +185,10 @@
         <h4>Quá trình thực hiện</h4>
         <p>Tôi thực hành sử dụng từ khóa, bộ lọc tìm kiếm và đối chiếu nhiều nguồn thông tin khác nhau để xác định mức độ chính xác của dữ liệu. Bài tập giúp tôi hiểu rằng trong môi trường số, việc tiếp cận thông tin nhanh là chưa đủ, mà còn cần khả năng phân tích và đánh giá một cách cẩn trọng.</p>
       </div>
+      <a href="#" target="_blank" class="btn-report">Xem chi tiết báo cáo &rarr;</a>
     </div>
 
+    <!-- Bài tập 3 -->
     <div class="assignment">
       <div class="assignment-head">
         <h3>Bài tập 3 — <span>Tổng quan về trí tuệ nhân tạo</span></h3>
@@ -137,8 +202,10 @@
         <h4>Quá trình thực hiện</h4>
         <p>Tôi tìm hiểu các ví dụ thực tế về ứng dụng AI, đồng thời thử sử dụng công cụ AI để quan sát cách đầu ra thay đổi theo câu lệnh đưa vào. Từ đó, tôi nhận ra AI là công cụ hỗ trợ rất mạnh, nhưng hiệu quả của nó phụ thuộc nhiều vào tư duy, mục tiêu và khả năng kiểm soát của người dùng.</p>
       </div>
+      <a href="#" target="_blank" class="btn-report">Xem chi tiết báo cáo &rarr;</a>
     </div>
 
+    <!-- Bài tập 4 -->
     <div class="assignment">
       <div class="assignment-head">
         <h3>Bài tập 4 — <span>Giao tiếp và hợp tác trong môi trường số</span></h3>
@@ -152,8 +219,10 @@
         <h4>Quá trình thực hiện</h4>
         <p>Tôi cùng các thành viên trong nhóm sử dụng công cụ số để trao đổi, phân công nhiệm vụ và chỉnh sửa tài liệu chung. Bài tập giúp tôi hiểu rõ hơn về tinh thần trách nhiệm, kỹ năng cộng tác và tầm quan trọng của sự thống nhất trong quá trình làm việc nhóm trong môi trường số.</p>
       </div>
+      <a href="#" target="_blank" class="btn-report">Xem chi tiết báo cáo &rarr;</a>
     </div>
 
+    <!-- Bài tập 5 -->
     <div class="assignment">
       <div class="assignment-head">
         <h3>Bài tập 5 — <span>Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</span></h3>
@@ -167,8 +236,10 @@
         <h4>Quá trình thực hiện</h4>
         <p>Tôi thử nghiệm sử dụng AI để gợi ý nội dung, hỗ trợ diễn đạt ý tưởng và cải thiện khả năng trình bày thông tin. Qua bài tập này, tôi nhận ra AI có thể giúp tiết kiệm thời gian và mở rộng góc nhìn sáng tạo, nhưng người học vẫn cần tự chọn lọc, chỉnh sửa và chịu trách nhiệm với kết quả cuối cùng.</p>
       </div>
+      <a href="#" target="_blank" class="btn-report">Xem chi tiết báo cáo &rarr;</a>
     </div>
 
+    <!-- Bài tập 6 -->
     <div class="assignment">
       <div class="assignment-head">
         <h3>Bài tập 6 — <span>An toàn và liêm chính học thuật trong môi trường số</span></h3>
@@ -182,6 +253,14 @@
         <h4>Quá trình thực hiện</h4>
         <p>Tôi tìm hiểu các nguyên tắc sử dụng tài liệu, dẫn nguồn, bảo vệ dữ liệu cá nhân và cách dùng AI một cách đúng đắn trong học tập. Bài tập này giúp tôi hiểu rằng kỹ năng số không chỉ dừng ở việc dùng công cụ, mà còn gắn liền với thái độ trung thực, cẩn trọng và có trách nhiệm.</p>
       </div>
+      <a href="#" target="_blank" class="btn-report">Xem chi tiết báo cáo &rarr;</a>
+    </div>
+
+    <!-- Ô dẫn link tới toàn bộ 6 bài ở cuối phần bài tập -->
+    <div class="all-assignments-box">
+      <h4>Kho lưu trữ bài tập thực hành</h4>
+      <p>Xem toàn bộ tài liệu, báo cáo chi tiết và các sản phẩm thực hành từ Tuần 1 đến Tuần 6 trên Google Drive.</p>
+      <a href="#" target="_blank" class="btn-all-reports">Tru cập thư mục Google Drive tổng hợp &rarr;</a>
     </div>
 
   </section>

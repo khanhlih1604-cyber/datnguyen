@@ -18,14 +18,43 @@
     }
   }
 
-  /* Style bổ sung cho các nút và khối dẫn link Google Drive */
+  /* Style cho hiệu ứng hạt nền sáng và rõ hơn */
+  .dot-field {
+    overflow: hidden;
+  }
+  .dot {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85); /* Tăng độ đậm đặc của màu trắng giúp hạt rõ hơn */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5); /* Tạo hiệu ứng phát sáng lấp lánh */
+    animation: floatAnim linear infinite;
+    pointer-events: none;
+  }
+  @keyframes floatAnim {
+    0% {
+      transform: translateY(0) scale(0.8);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-80px) scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  /* Style bổ sung cho các nút và khối dẫn link Google Drive - TONE ĐỎ ĐÔ */
   .btn-report {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     margin-top: 16px;
     padding: 10px 20px;
-    background-color: #2563eb;
+    background-color: #800020; 
     color: #ffffff;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -35,14 +64,14 @@
     transition: background-color 0.2s ease, transform 0.2s ease;
   }
   .btn-report:hover {
-    background-color: #1d4ed8;
+    background-color: #5c0017; 
     transform: translateY(-1px);
   }
   .all-assignments-box {
     margin-top: 30px;
     padding: 24px;
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-    border: 1px solid #bfdbfe;
+    background: linear-gradient(135deg, #fff5f5 0%, #fbe8eb 100%); 
+    border: 1px solid #f3c6ce;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -50,13 +79,13 @@
   .all-assignments-box h4 {
     margin: 0 0 8px 0;
     font-family: 'Playfair Display', serif;
-    color: #1e3a8a;
+    color: #5c0017;
     font-size: 20px;
   }
   .all-assignments-box p {
     margin: 0 0 16px 0;
     font-family: 'Inter', sans-serif;
-    color: #1e40af;
+    color: #800020;
     font-size: 14px;
   }
   .btn-all-reports {
@@ -64,7 +93,7 @@
     align-items: center;
     gap: 8px;
     padding: 12px 28px;
-    background-color: #1e3a8a;
+    background-color: #5c0017; 
     color: #ffffff;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -74,7 +103,7 @@
     transition: background-color 0.2s ease, transform 0.2s ease;
   }
   .btn-all-reports:hover {
-    background-color: #172554;
+    background-color: #3d000e;
     transform: translateY(-2px);
   }
 </style>
@@ -326,13 +355,21 @@
     field.className = 'dot-field';
     field.style.position='absolute'; field.style.inset='0';
     bg.appendChild(field);
-    for(let i=0;i<26;i++){
+    
+    // Tăng số lượng hạt lên một chút (32 hạt) và nâng kích thước ngẫu nhiên để nhìn rõ hơn
+    for(let i=0;i<32;i++){
       const d = document.createElement('div');
       d.className='dot';
       d.style.left = Math.random()*100+'%';
       d.style.top = Math.random()*100+'%';
-      d.style.animationDuration = (10+Math.random()*14)+'s';
-      d.style.animationDelay = (Math.random()*10)+'s';
+      
+      // Kích thước hạt từ 4px đến 8px để tạo độ rõ nét bừng sáng
+      const size = 4 + Math.random()*4;
+      d.style.width = size + 'px';
+      d.style.height = size + 'px';
+      
+      d.style.animationDuration = (12+Math.random()*12)+'s';
+      d.style.animationDelay = (Math.random()*8)+'s';
       field.appendChild(d);
     }
   }
